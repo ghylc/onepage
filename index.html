@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>one page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <div class="wrap" id="wrap">
+        <div class="item item-1">
+            <div class="box">1</div>
+        </div>
+        <div class="item item-2">
+            <div class="box">2</div>
+        </div>
+        <div class="item item-3">
+            <div class="box">3</div>
+        </div>
+        <div class="item item-4">
+            <div class="box">4</div>
+        </div>
+        <div class="item item-5">
+            <div class="box">5</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/iSlider.js"></script>
+    <script>
+        //用法
+        var myslider=new iSlider({
+            wrap:'#wrap',
+            item:'.item',
+            onslide:function (index) {
+                if (index == 5) {
+                    bigMap();
+                }
+            }
+        });
+
+        /* 插入音乐 */
+           var url = "images/yqh.mp3";
+           window.audio = document.createElement("audio");
+           var source = document.createElement("source");
+           audio.id = "audio";
+           source.type = "audio/mpeg";
+           source.src = url;
+           source.autoplay = "autoplay";
+           // 音乐循环
+           audio.addEventListener("ended", function() {
+               audio.play();
+           }, false);
+
+           audio.appendChild(source);
+           audio.play();
+
+
+           var btnMusic = document.getElementById('btnMusic');
+           var musicImg = btnMusic.getElementsByTagName('img');
+           var onOff=true;
+           btnMusic.onclick= function(){
+            if(onOff){
+              audio.pause();
+              musicImg[0].src='images/music-p.png';
+              onOff = false;
+            }else{
+              audio.play();
+              musicImg[0].src='images/music-s.png';
+              onOff = true;
+            }
+          }
+
+        function bigMap(){
+          share_dia = document.getElementById('s4Sharefd');
+            sharepop = document.getElementById('s4Share');
+            share_dia.onclick = function() {
+                sharepop.style.display = "block";
+
+            };
+            sharepop.onclick = function() {
+                sharepop.style.display = "none";
+
+            };
+        }
+
+    </script>
+</body>
+</html>
