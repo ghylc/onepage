@@ -1,0 +1,262 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+fieldset,img{border:0}
+table{border-collapse:collapse;border-spacing:0}
+li{list-style:none}
+a,a:hover{text-decoration:none;color:#ffe400;}
+html,body{ height: 100%; background: #110b16;}
+body{line-height:1.5;font-size:12px;font-family:"hiragino sans gb",Arial;color:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0)} 
+.wrap{position:relative;color:#fff; height: 100%; overflow: hidden;}
+.hide {display: none;}
+.btnMusic{ position: absolute; width: 27px; height: 27px; top: 10px; right: 10px; z-index: 9;}
+/*页面加载提示*/
+/*.mod_loading{position:absolute;height:100%;left:0;top:0;width:100%;z-index:100;background-color:#b9ccd5;display:-webkit-box;-webkit-box-align:center;}
+.mod_loading .content{ text-align:center;-webkit-box-flex:1;margin:0 80px;}
+.mod_loading .content .progress{height:13px;padding:2px;-webkit-border-radius:17px;border-radius:17px;background-color:#242a39;}
+.mod_loading .content .progress span{display:block;height:13px;-webkit-border-radius:13px;border-radius:13px;background-color:#65cfd5;}
+.mod_loading .content p{line-height:34px;color:#5f696a;}*/
+/*滑块*/
+.slider{position: absolute;width: 37px;height: 65px;margin-left: -18px;left: 50%; bottom: 15px;z-index: 9999; -webkit-animation:pull 0.7s 0s ease infinite alternate both; -moz-animation:pull 0.7s 0s ease infinite both;}
+.slider .pull{ background: url(../img/pull.png) no-repeat; background-size: 37px;}
+.slider .pull_1{ width: 37px; height: 38px; background-position: 0 0;}
+.slider .pull_2{ width: 37px; height: 12px; background-position: 0 -37px; opacity: 0; -webkit-animation:fadeIn 0.7s 0s ease infinite alternate both; -moz-animation:fadeIn 0.7s 0s ease infinite alternate both;}
+.slider .pull_3{ width: 37px; height: 8px; background-position: 0 -49px; opacity: 0; -webkit-animation:fadeIn 0.7s 0s ease infinite alternate both; -moz-animation:fadeIn 0.7s 0s ease infinite alternate both;}
+.slider .pull_4{ width: 37px; height: 7px; background-position: 0 -57px; opacity: 0; -webkit-animation:fadeIn 0.7s 0s ease infinite alternate both; -moz-animation:fadeIn 0.7s 0s ease infinite alternate both;}
+.item, .item .box {width: 100%;height: 100%;overflow: hidden;}
+.item .box{ position: relative;}
+
+/*common*/
+.item{ overflow: hidden;}
+.mod_container {position: absolute;left: 50%;top: 40%;margin-top: -36px;-webkit-transform: translate3d(-50%, -50%, 0);-webkit-backface-visibility:hidden;z-index: 2;}
+.mod_container img{ display: block; margin: 0 auto;}
+.mod_container{ opacity: 0;}
+.play .mod_container{ opacity: 1;}
+
+
+.s4_share {background-color: rgba(0,0,0,.8);position: fixed;top: 0;right: 0;height: 100%;width: 100%;}
+.s4_share img{width: 100%; position: absolute; right: 0; top: 25%; }
+/* item-1 */
+.item-1{ background: url(../img/bg01.jpg) no-repeat; background-size: cover;}
+.item-1 .text1{ margin-bottom: 15px;}
+.item-1 .text2{ width: 249px; height: 33px;}
+.mod_container1 div{ width: 249px; height: 33px; margin: 0 auto; overflow: hidden;}
+.play .mod_container1 .text1{ -webkit-animation:fadeInUpBig 1s 0s ease both; -moz-animation:fadeInUpBig 1s 0s ease both;}
+.play .mod_container1 div{ width: 249px; height: 33px; -webkit-animation:TypewriterLeft 2s 1.2s ease both; -moz-animation:TypewriterLeft 2s 1.2s ease both; -webkit-transform-origin:left center; -moz-transform-origin:left center;}
+
+/* item-2 */
+.item-2{ background: url(../img/bg02.jpg) no-repeat; background-size: cover;}
+.item-2 .text1{ position: absolute; top: 165px; left: 50%; margin-left: -58px;}
+.item-2 .text2{ position: absolute; top: 200px; left: 50%; margin-left: -136px;}
+.item-2 .text3{ position: absolute; top: 208px; left: 50%; margin-left: -89px;}
+.play .mod_container2 .text1{ -webkit-animation:fadeInUpBig 1s 0.4s ease both; -moz-animation:fadeInUpBig 1s 0.4s ease both;}
+.play .mod_container2 .text2{ -webkit-animation:ZoomIn 1s 1.4s ease both; -moz-animation:ZoomIn 1s 1.4s ease both;}
+.play .mod_container2 .text3{ -webkit-animation:fadeIn 2s 1.4s ease both; -moz-animation:fadeIn 2s 1.4s ease both;}
+.play .mod_container2 .img1_wrap{ position: relative; width: 315px; height: 278px; margin: 0 auto; -webkit-animation:fadeInLeftBig 1s 0s ease both; -moz-animation:fadeInLeftBig 1s 0s ease both;}
+.play .mod_container2 .img1{ position: absolute; top: 0; left: 0; -webkit-animation:Car 1.6s 1.2s ease infinite; -moz-animation:Car 1.6s 1.2s ease infinite; -webkit-transform-origin:left bottom; -moz-transform-origin:left bottom;}
+
+/* item-3 */
+.item-3{ background: url(../img/bg03.jpg) no-repeat; background-size: cover;}
+.item-3 .img2{ position: absolute; top: 24px; left: 36px;}
+.item-3 .img3{ position: absolute; top: 64px; left: 76px;}
+.item-3 .img4_wrap{ position: absolute; width: 220px; height: 133px; top: 75px; left: -36px; z-index: 3;}
+.item-3 .img4_wrap div{ width: 220px; height: 133px; overflow: hidden;}
+.item-3 .text1{ position: absolute; top: 204px; left: 50%; margin-left: -58px;}
+.item-3 .text2{ position: absolute; top: 237px; left: 50%; margin-left: -86px;}
+.item-3 .text3{ position: absolute; top: 240px; left: 50%; margin-left: -89px;}
+.play .mod_container3 .img1{ -webkit-animation:fadeIn 2s 0s ease both; -moz-animation:fadeIn 2s 0s ease both;}
+.play .mod_container3 .img2{ -webkit-animation:fadeInDownBig 0.8s 0s ease both; -moz-animation:fadeInDownBig 0.8s 0s ease both;}
+.play .mod_container3 .img3{ -webkit-animation:fadeInUpBig 0.8s 0s ease both; -moz-animation:fadeInUpBig 0.8s 0s ease both;}
+.play .mod_container3 .img4_wrap div{ -webkit-animation:TypewriterLeft 2s 1.2s ease both; -moz-animation:TypewriterLeft 2s 1.2s ease both; -webkit-transform-origin:left center; -moz-transform-origin:left center;}
+.play .mod_container3 .text1{ -webkit-animation:fadeInUpBig 1s 0.8s ease both; -moz-animation:fadeInUpBig 1s 0.8s ease both;}
+.play .mod_container3 .text2{ -webkit-animation:ZoomIn 1s 1.6s ease both; -moz-animation:ZoomIn 1s 1.6s ease both;}
+.play .mod_container3 .text3{ -webkit-animation:fadeIn 2s 1.6s ease both; -moz-animation:fadeIn 2s 1.6s ease both;}
+
+/* item-4 */
+.item-4{ background: url(../img/bg04.jpg) no-repeat; background-size: cover;}
+.item-4 .img2{ position: absolute; top: 18px; left: 9px;}
+.item-4 .img3{ position: absolute; top: 31px; left: 145px;}
+.item-4 .img4_wrap{ position: absolute; width: 263px; height: 135px; top: -16px; left: 4px; z-index: 3;}
+.item-4 .img4_wrap div{ width: 263px; height: 135px; overflow: hidden;}
+.item-4 .text1{ position: absolute; top: 130px; left: 50%; margin-left: -58px;}
+.item-4 .text2{ position: absolute; top: 170px; left: 50%; margin-left: -82px;}
+.item-4 .text3{ position: absolute; top: 175px; left: 50%; margin-left: -89px;}
+.play .mod_container4 .img1{ -webkit-animation:fadeIn 2s 0s ease both; -moz-animation:fadeIn 2s 0s ease both;}
+.play .mod_container4 .img2{ -webkit-animation:fadeInLeftBig 0.8s 0s ease both; -moz-animation:fadeInLeftBig 0.8s 0s ease both;}
+.play .mod_container4 .img3{ -webkit-animation:fadeInRightBig 0.8s 0s ease both; -moz-animation:fadeInRightBig 0.8s 0s ease both;}
+.play .mod_container4 .img4_wrap div{ -webkit-animation:TypewriterLeft 2s 1.2s ease both; -moz-animation:TypewriterLeft 2s 1.2s ease both; -webkit-transform-origin:left center; -moz-transform-origin:left center;}
+.play .mod_container4 .text1{ -webkit-animation:fadeInUpBig 1s 0.8s ease both; -moz-animation:fadeInUpBig 1s 0.8s ease both;}
+.play .mod_container4 .text2{ -webkit-animation:ZoomIn 1s 1.6s ease both; -moz-animation:ZoomIn 1s 1.6s ease both;}
+.play .mod_container4 .text3{ -webkit-animation:fadeIn 2s 1.6s ease both; -moz-animation:fadeIn 2s 1.6s ease both;}
+
+/* item-5 */
+.item-5{ background: url(../img/bg05.jpg) no-repeat; background-size: cover;}
+.item-5 .img2{ position: absolute; top: 34px; left: 10px;}
+.item-5 .img3{ position: absolute; top: 38px; left: 132px;}
+.item-5 .img4_wrap{ position: absolute; width: 266px; height: 121px; top: 14px; left: -11px; z-index: 3;}
+.item-5 .img4_wrap div{ width: 266px; height: 121px; overflow: hidden;}
+.item-5 .text1{ position: absolute; top: 136px; left: 50%; margin-left: -58px;}
+.item-5 .text2{ position: absolute; top: 173px; left: 50%; margin-left: -90px;}
+.item-5 .text3{ position: absolute; top: 180px; left: 50%; margin-left: -62px;}
+.play .mod_container5 .img1{ -webkit-animation:fadeIn 2s 0s ease both; -moz-animation:fadeIn 2s 0s ease both;}
+.play .mod_container5 .img2{ -webkit-animation:ZoomIn2 1s 0s ease both; -moz-animation:ZoomIn2 1s 0s ease both;}
+.play .mod_container5 .img3{ -webkit-animation:ZoomIn2 1s 0s ease both; -moz-animation:ZoomIn2 1s 0s ease both;}
+.play .mod_container5 .img4_wrap div{ -webkit-animation:TypewriterLeft 2s 1.2s ease both; -moz-animation:TypewriterLeft 2s 1.2s ease both; -webkit-transform-origin:left center; -moz-transform-origin:left center;}
+.play .mod_container5 .text1{ -webkit-animation:fadeInUpBig 1s 0.8s ease both; -moz-animation:fadeInUpBig 1s 0.8s ease both;}
+.play .mod_container5 .text2{ -webkit-animation:ZoomIn 1s 1.6s ease both; -moz-animation:ZoomIn 1s 1.6s ease both;}
+.play .mod_container5 .text3{ -webkit-animation:fadeIn 2s 1.6s ease both; -moz-animation:fadeIn 2s 1.6s ease both;}
+
+/* item-6 */
+.item-6{ background: url(../img/bg06.jpg) no-repeat; background-size: cover;}
+.mod_container6{ top: 42.5%;}
+.item-6 .text3{ position: absolute; top: 32px; left: 50%; margin-left: -116px;}
+.item-6 .text2{ margin-top: 40px;}
+.item-6 .text1{ position: absolute; top: 115px; left: 50%; margin-left: -8px;}
+.item-6 .text4{ margin: 5px auto 30px;}
+.item-6 .time{ font-size: 16px; color: #fff; line-height: 36px;}
+.item-6 .add{ margin-bottom: 12px; font-size: 12px; color: #fff; line-height: 18px;}
+.item-6 .map{ position: fixed; z-index: 9999;}
+.play .mod_container6 .text1{ -webkit-animation:fadeInUpBig 1s 0s ease both; -moz-animation:fadeInUpBig 1s 0s ease both;}
+.play .mod_container6 .text2{ -webkit-animation:ZoomIn2 2s 0s ease both; -moz-animation:ZoomIn2 2s 0s ease both;}
+.play .mod_container6 .text3{ -webkit-animation:ZoomIn 1s 1.6s ease both; -moz-animation:ZoomIn 1s 1.6s ease both;}
+.play .mod_container6 .text4{ -webkit-animation:fadeInUpBig 1s 0.2s ease both; -moz-animation:fadeInUpBig 1s 0.2s ease both;}
+.play .mod_container6 .time{ -webkit-animation:fadeInUpBig 1s 0.5s ease both; -moz-animation:fadeInUpBig 1s 0.5s ease both;}
+.play .mod_container6 .add{ -webkit-animation:fadeInUpBig 1s 0.8s ease both; -moz-animation:fadeInUpBig 1s 0.8s ease both;}
+.play .mod_container6 .map{ -webkit-animation:fadeInUpBig 1s 1.1s ease both; -moz-animation:fadeInUpBig 1s 1.1s ease both;}
+.play .mod_container6 .map a{ z-index: 9999;}
+
+
+@media screen and (max-height: 416px) {
+	.item{ background-position: 0 -50px;}
+    .mod_container {-webkit-transform: translate3d(-50%, -50%, 0) scale(.85);margin-top: -25px;}
+    .slider{ bottom: 5px;}
+}
+
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, only screen and (min-resolution: 240dpi) {
+    
+}
+*/
+/*底部进入动画*/
+@-webkit-keyframes fadeInUpBig{
+0%{opacity:0;
+-webkit-transform:translateY(2000px)}
+100%{opacity:1;
+-webkit-transform:translateY(0)}
+}
+@-moz-keyframes fadeInUpBig{
+0%{opacity:0;
+-moz-transform:translateY(2000px)}
+100%{opacity:1;
+-moz-transform:translateY(0)}
+}
+
+/*顶部进入动画*/
+@-webkit-keyframes fadeInDownBig{
+0%{opacity:0;
+-webkit-transform:translateY(-2000px)}
+100%{opacity:1;
+-webkit-transform:translateY(0)}
+}
+@-moz-keyframes fadeInDownBig{
+0%{opacity:0;
+-moz-transform:translateY(-2000px)}
+100%{opacity:1;
+-moz-transform:translateY(0)}
+}
+
+/*打字机从左到右动画*/
+@-webkit-keyframes TypewriterLeft{
+0%{width:0;}
+100%{}
+}
+@-moz-keyframes TypewriterLeft{
+0%{width:0;}
+100%{}
+}
+
+/*底部滑块动画*/
+@-webkit-keyframes pull{
+0%{ bottom: 15px;}
+100%{ bottom: 10px;}
+}
+@-moz-keyframes pull{
+0%{ bottom: 15px;}
+100%{ bottom: 10px;}
+}
+
+/*左边进入动画*/
+@-webkit-keyframes fadeInLeftBig{
+0%{opacity:0;
+-webkit-transform:translateX(-2000px)}
+100%{opacity:1;
+-webkit-transform:translateX(0)}
+}
+@-moz-keyframes fadeInLeftBig{
+0%{opacity:0;
+-moz-transform:translateX(-2000px)}
+100%{opacity:1;
+-moz-transform:translateX(0)}
+}
+
+/*右边边进入动画*/
+@-webkit-keyframes fadeInRightBig{
+0%{opacity:0;
+-webkit-transform:translateX(2000px)}
+100%{opacity:1;
+-webkit-transform:translateX(0)}
+}
+@-moz-keyframes fadeInRightBig{
+0%{opacity:0;
+-moz-transform:translateX(2000px)}
+100%{opacity:1;
+-moz-transform:translateX(0)}
+}
+
+/*淡入效果*/
+@-webkit-keyframes fadeIn{
+0%{opacity:0}
+100%{opacity:1}
+}
+@-moz-keyframes fadeIn{
+0%{opacity:0}
+100%{opacity:1}
+}
+
+/*缩放淡入效果*/
+@-webkit-keyframes ZoomIn{
+0%{opacity:0; -webkit-transform: scale(5);}
+70%{opacity:1; -webkit-transform: scale(1);}
+80%{opacity:0.4; -webkit-transform: scale(1.1);}
+100%{opacity:1; -webkit-transform: scale(1);}
+}
+@-moz-keyframes ZoomIn{
+0%{opacity:0; -webkit-transform: scale(5);}
+70%{opacity:1; -webkit-transform: scale(1);}
+80%{opacity:0.4; -webkit-transform: scale(1.1);}
+100%{opacity:1; -webkit-transform: scale(1);}
+}
+
+/*缩放淡入效果*/
+@-webkit-keyframes ZoomIn2{
+0%{opacity:0; -webkit-transform: scale(0);}
+70%{opacity:1; -webkit-transform: scale(1);}
+80%{opacity:1; -webkit-transform: scale(1.1);}
+100%{opacity:1; -webkit-transform: scale(1);}
+}
+@-moz-keyframes ZoomIn2{
+0%{opacity:0; -webkit-transform: scale(0);}
+70%{opacity:1; -webkit-transform: scale(1);}
+80%{opacity:1; -webkit-transform: scale(1.1);}
+100%{opacity:1; -webkit-transform: scale(1);}
+}
+
+/*汽车的动画*/
+@-webkit-keyframes Car{
+0%{-webkit-transform:rotate(0deg);}
+50%{-webkit-transform:rotate(0.8deg);}
+100%{-webkit-transform:rotate(0deg);}
+}
+@-moz-keyframes Car{
+0%{}
+100%{}
+}
